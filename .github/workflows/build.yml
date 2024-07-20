@@ -2,11 +2,12 @@ name: Build
 on: workflow_dispatch
 jobs:
   PyInstaller:
-    runs-on: ${{ matrix.os }}
+    # runs-on: ${{ matrix.os }}
+    runs-on: windows-2019
     strategy:
       fail-fast: false
-      matrix:
-        os: [windows-2019, macos-10.15]
+      # matrix:
+      #   os: [windows-2019, macos-10.15]
     defaults:
       run:
         shell: bash
